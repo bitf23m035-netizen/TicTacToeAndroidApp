@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ══════════════════════════════════════════
+         App Theme
+    ══════════════════════════════════════════ -->
+
+    <style name="Theme.TicTacToe" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:windowBackground">@color/bg_primary</item>
+        <item name="android:statusBarColor">@color/bg_primary</item>
+        <item name="android:navigationBarColor">@color/bg_primary</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="Theme.TicTacToe.Splash" parent="Theme.TicTacToe">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- ══════════════════════════════════════════
+         Cell style
+         Parent = Widget.AppCompat.TextView (a real, resolvable parent)
+    ══════════════════════════════════════════ -->
+
+    <style name="Widget.TicTacToe.Cell" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">44sp</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:background">@drawable/cell_bg</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <!-- ══════════════════════════════════════════
+         Difficulty buttons
+    ══════════════════════════════════════════ -->
+
+    <style name="Widget.TicTacToe.DifficultyButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <style name="Widget.TicTacToe.DifficultyButton.Easy" parent="Widget.TicTacToe.DifficultyButton">
+        <item name="android:textColor">@color/btn_easy</item>
+        <item name="strokeColor">@color/btn_easy</item>
+    </style>
+
+    <style name="Widget.TicTacToe.DifficultyButton.Medium" parent="Widget.TicTacToe.DifficultyButton">
+        <item name="android:textColor">@color/btn_medium</item>
+        <item name="strokeColor">@color/btn_medium</item>
+    </style>
+
+    <style name="Widget.TicTacToe.DifficultyButton.Hard" parent="Widget.TicTacToe.DifficultyButton">
+        <item name="android:textColor">@color/btn_hard</item>
+        <item name="strokeColor">@color/btn_hard</item>
+    </style>
+
+</resources>

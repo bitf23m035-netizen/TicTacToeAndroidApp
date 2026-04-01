@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Downloadable font from Google Fonts.
+    Android fetches this automatically at runtime.
+    Requires internet access on first launch.
+    Falls back to system sans-serif if unavailable.
+-->
+<font-family xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:fontProviderAuthority="com.google.android.gms.fonts"
+    app:fontProviderPackage="com.google.android.gms"
+    app:fontProviderQuery="name=Montserrat&amp;weight=700"
+    app:fontProviderCerts="@array/com_google_android_gms_fonts_certs">
+</font-family>

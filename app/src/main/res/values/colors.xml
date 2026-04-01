@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Background -->
+    <color name="bg_primary">#0D0D14</color>
+    <color name="card_bg">#1A1A28</color>
+    <color name="card_stroke">#2A2A40</color>
+
+    <!-- Text -->
+    <color name="text_primary">#F0F0FF</color>
+    <color name="text_secondary">#7A7A99</color>
+
+    <!-- Players -->
+    <color name="player_x">#FF6B6B</color>
+    <color name="player_o">#4ECDC4</color>
+    <color name="draw_color">#A0A0C0</color>
+
+    <!-- Accent -->
+    <color name="accent">#7C6DFA</color>
+    <color name="accent_light">#A99FFD</color>
+
+    <!-- Cell -->
+    <color name="cell_bg">#1E1E30</color>
+    <color name="cell_winner_bg">#2A1F50</color>
+    <color name="cell_stroke">#2E2E48</color>
+    <color name="cell_winner_stroke">#7C6DFA</color>
+
+    <!-- Difficulty buttons -->
+    <color name="btn_easy">#2ECC71</color>
+    <color name="btn_medium">#F39C12</color>
+    <color name="btn_hard">#E74C3C</color>
+
+    <!-- System -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="primaryColor">#7C6DFA</color>
+    <color name="primaryDarkColor">#5A4ED4</color>
+    <color name="secondaryColor">#4ECDC4</color>
+</resources>

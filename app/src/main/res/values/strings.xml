@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tic Tac Toe</string>
+    <string name="tagline">Classic Strategy Game</string>
+
+    <!-- Menu -->
+    <string name="select_mode">Choose Game Mode</string>
+    <string name="mode_pvp">Player vs Player</string>
+    <string name="mode_pvp_desc">Challenge a friend locally</string>
+    <string name="mode_pvc">Player vs Computer</string>
+    <string name="mode_pvc_desc">Test your skills against AI</string>
+    <string name="difficulty_easy">Easy</string>
+    <string name="difficulty_medium">Medium</string>
+    <string name="difficulty_hard">Hard</string>
+
+    <!-- Game -->
+    <string name="player_x_label">Player X</string>
+    <string name="player_o_label">Player O</string>
+    <string name="draw_label">Draws</string>
+    <string name="player_x_name">Player X</string>
+    <string name="player_o_name">Player O</string>
+    <string name="player_computer">Computer</string>
+    <string name="turn_indicator">%s\'s Turn</string>
+    <string name="result_winner">%s Wins! 🎉</string>
+    <string name="result_draw">It\'s a Draw! 🤝</string>
+    <string name="play_again">Play Again</string>
+    <string name="back">Back</string>
+    <string name="reset_scores">Reset Scores</string>
+</resources>

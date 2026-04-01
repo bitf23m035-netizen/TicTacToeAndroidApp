@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Android Vector Drawable — only <path>, <group>, <clip-path> are valid child elements.
+    <line> does NOT exist in AVD. All lines must be drawn with M (moveto) + L (lineto) paths.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- Outer border rectangle -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#7C6DFA"
+        android:strokeWidth="5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M10,10 L110,10 L110,110 L10,110 Z" />
+
+    <!-- Grid lines: both verticals + both horizontals in one path -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#7C6DFA"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:pathData="M43,10 L43,110 M77,10 L77,110 M10,43 L110,43 M10,77 L110,77" />
+
+    <!-- X in top-left cell -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FF6B6B"
+        android:strokeWidth="5"
+        android:strokeLineCap="round"
+        android:pathData="M18,18 L35,35 M35,18 L18,35" />
+
+    <!-- O in center cell — circle drawn as two arcs -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#4ECDC4"
+        android:strokeWidth="5"
+        android:strokeLineCap="round"
+        android:pathData="M60,51 A9,9 0 1,1 59.999,51" />
+
+</vector>

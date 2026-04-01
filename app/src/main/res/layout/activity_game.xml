@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary">
+
+    <!-- Top bar -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_back"
+            android:tint="@color/text_primary"
+            android:background="@drawable/icon_btn_bg"
+            android:contentDescription="@string/back" />
+
+        <TextView
+            android:id="@+id/tvModeLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:fontFamily="sans-serif-black"
+            android:letterSpacing="0.05" />
+
+        <ImageButton
+            android:id="@+id/btnResetScores"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_reset"
+            android:tint="@color/text_secondary"
+            android:background="@drawable/icon_btn_bg"
+            android:contentDescription="@string/reset_scores" />
+    </LinearLayout>
+
+    <!-- Scoreboard -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/scoreCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="12dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="@color/card_bg"
+        app:cardElevation="2dp"
+        app:strokeColor="@color/card_stroke"
+        app:strokeWidth="1dp"
+        app:layout_constraintTop_toBottomOf="@+id/topBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <!-- Player X score -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/player_x_label"
+                    android:textSize="11sp"
+                    android:textColor="@color/player_x"
+                    android:fontFamily="sans-serif-black"
+                    android:letterSpacing="0.1"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    android:id="@+id/tvScoreX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="32sp"
+                    android:textColor="@color/player_x"
+                    android:fontFamily="sans-serif-black" />
+            </LinearLayout>
+
+            <!-- Draw score -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/draw_label"
+                    android:textSize="11sp"
+                    android:textColor="@color/text_secondary"
+                    android:fontFamily="sans-serif-black"
+                    android:letterSpacing="0.1"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    android:id="@+id/tvScoreDraw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="32sp"
+                    android:textColor="@color/draw_color"
+                    android:fontFamily="sans-serif-black" />
+            </LinearLayout>
+
+            <!-- Player O score -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/player_o_label"
+                    android:textSize="11sp"
+                    android:textColor="@color/player_o"
+                    android:fontFamily="sans-serif-black"
+                    android:letterSpacing="0.1"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    android:id="@+id/tvScoreO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="32sp"
+                    android:textColor="@color/player_o"
+                    android:fontFamily="sans-serif-black" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Turn Indicator -->
+    <TextView
+        android:id="@+id/tvCurrentPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-black"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/scoreCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 3x3 Grid Board -->
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gameGrid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvCurrentPlayer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toTopOf="@+id/tvResult">
+
+        <!-- Row 0 -->
+        <TextView android:id="@+id/cell0"
+            style="@style/Widget.TicTacToe.Cell"
+            app:layout_row="0" app:layout_column="0"
+            app:layout_rowWeight="1" app:layout_columnWeight="1"
+            app:layout_gravity="fill" />
+        <TextView android:id="@+id/cell1"
+            style="@style/Widget.TicTacToe.Cell"
+            app:layout_row="0" app:layout_column="1"
+            app:layout_rowWeight="1" app:layout_columnWeight="1"
+            app:layout_gravity="fill" />
+        <TextView android:id="@+id/cell2"
+            style="@style/Widget.TicTacToe.Cell"
+            app:layout_row="0" app:layout_column="2"
+            app:layout_rowWeight="1" app:layout_columnWeight="1"
+            app:layout_gravity="fill" />
+
+        <!-- Row 1 -->
+        <TextView android:id="@+id/cell3"
+            style="@style/Widget.TicTacToe.Cell"
+            app:layout_row="1" app:layout_column="0"
+            app:layout_rowWeight="1" app:layout_columnWeight="1"
+            app:layout_gravity="fill" />
+        <TextView android:id="@+id/cell4"
+            style="@style/Widget.TicTacToe.Cell"
+            app:layout_row="1" app:layout_column="1"
+            app:layout_rowWeight="1" app:layout_columnWeight="1"
+            app:layout_gravity="fill" />
+        <TextView android:id="@+id/cell5"
+            style="@style/Widget.TicTacToe.Cell"
+            app:layout_row="1" app:layout_column="2"
+            app:layout_rowWeight="1" app:layout_columnWeight="1"
+            app:layout_gravity="fill" />
+
+        <!-- Row 2 -->
+        <TextView android:id="@+id/cell6"
+            style="@style/Widget.TicTacToe.Cell"
+            app:layout_row="2" app:layout_column="0"
+            app:layout_rowWeight="1" app:layout_columnWeight="1"
+            app:layout_gravity="fill" />
+        <TextView android:id="@+id/cell7"
+            style="@style/Widget.TicTacToe.Cell"
+            app:layout_row="2" app:layout_column="1"
+            app:layout_rowWeight="1" app:layout_columnWeight="1"
+            app:layout_gravity="fill" />
+        <TextView android:id="@+id/cell8"
+            style="@style/Widget.TicTacToe.Cell"
+            app:layout_row="2" app:layout_column="2"
+            app:layout_rowWeight="1" app:layout_columnWeight="1"
+            app:layout_gravity="fill" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <!-- Result Banner -->
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:fontFamily="sans-serif-black"
+        android:visibility="invisible"
+        android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/gameGrid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnRestart" />
+
+    <!-- Restart Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRestart"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/play_again"
+        android:fontFamily="sans-serif-black"
+        android:textSize="15sp"
+        android:letterSpacing="0.05"
+        app:cornerRadius="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
